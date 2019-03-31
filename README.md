@@ -1,6 +1,21 @@
+# Wing It
+*Makers Final Project*
+Authors: Isabel Cooper, Tom Damant, Szilvi Horvath, Chloe Montgomery
 
-Create DB:
------
+The problem we wanted to solve was the pain of organising group trips. 
+As the organiser of a trip, you face 2 problems:
+1. You have to nag everyone to do things - and no one wants to be that person.
+2. It’s tricky to show that you’re taking lots of opinions into account for the big decisions.
+
+So we made an app to collect and centralise the information and send reminders for key decisions and actions you need the group to take.
+
+The application is written in JavaScript, and we used Postgres, Express, Node JS, jQuery. Tested with Jest and Puppeteer and deployed on Heroku.
+
+
+## To set up locally:
+
+### Create DB:
+
 ```
 CREATE DATABASE planning;
 ```
@@ -43,3 +58,5 @@ Create comments table:
 ```
 CREATE TABLE comments (id SERIAL PRIMARY KEY, user_id INTEGER REFERENCES users (id), comment VARCHAR, date TIMESTAMP DEFAULT NOW(), announcement BOOL, trip_id INTEGER REFERENCES trips (id));
 ```
+
+
